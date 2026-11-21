@@ -18,10 +18,10 @@
 </head>
 <body>
 <h1>Bible Verse Widget – Privacy Policy</h1>
-<p class="updated">Last updated: November 20, 2026</p>
+<p class="updated">Last updated: November 21, 2026</p>
 
 <div class="summary">
-<p><strong>In short:</strong> Bible Verse Widget has no accounts, no ads and no analytics, and it does not send anything to the developer. Your settings and saved verses stay on your phone. The app connects to the internet only to download Bible verse text.</p>
+<p><strong>In short:</strong> Bible Verse Widget has no accounts, no ads and no analytics, and it does not send anything to the developer. Your settings and saved verses stay on your phone. The app connects to the internet only to download Bible verse text. It also works out which country your phone is in, on the phone itself, to decide which Bible translations it may show. That country is never sent anywhere.</p>
 </div>
 
 <h2>Who is responsible for the app</h2>
@@ -36,25 +36,32 @@
 </ul>
 <p>This information is removed when you uninstall the app.</p>
 
+<h2>Country check</h2>
+<p>Copyright on some Bible translations differs from country to country. A translation can be free to use in one country and still protected in another. So that the app only shows a translation where it may be shown, it works out which country your phone is in. It does this entirely on your phone, using:</p>
+<ul>
+  <li>the country code of your SIM card and of the mobile network your phone is connected to, as reported by Android, and</li>
+  <li>only if neither is available (for example a tablet without a SIM card), the region of your phone's language setting.</li>
+</ul>
+<p>This needs no permission and does not use your GPS or your precise location. The country is not saved, not uploaded and not sent to the developer or to any other service. It is shown to you on the Settings page under "Detected country". Translations that may not be shown in your country appear greyed out and cannot be selected. If your country cannot be worked out, those translations are disabled.</p>
+
 <h2>Diagnostic log file</h2>
-<p>The app writes a plain-text diagnostic log to your phone's <code>Documents</code> folder (a file named like <code>psalm_log_….txt</code>). It records what the app did and why something may have failed, for example times, which translation and passage were requested, error messages, and device conditions that affect background work such as Battery Saver, Data Saver and whether a network was available. The app never sends this file anywhere. You can open or delete it at any time with a file manager. The file may remain on your phone after the app is uninstalled until you delete it. If you choose to send the file to the developer, that is your decision.</p>
+<p>The app writes a plain-text diagnostic log to your phone's <code>Documents</code> folder (a file named like <code>psalm_log_….txt</code>). It records what the app did and why something may have failed, for example times, which translation and passage were requested, error messages, whether a translation was switched because of the country check (but not which country your phone is in), and device conditions that affect background work such as Battery Saver, Data Saver and whether a network was available. The app never sends this file anywhere. You can open or delete it at any time with a file manager. The file may remain on your phone after the app is uninstalled until you delete it. If you choose to send the file to the developer, that is your decision.</p>
 
 <h2>Internet use</h2>
 <p>To show a verse, the app downloads Bible text from these services:</p>
 <ul>
+  <li>bible.helloao.org (Free Use Bible API)</li>
   <li>bible-api.com</li>
   <li>query.getbible.net (getBible)</li>
-  <li>cdn.jsdelivr.net (jsDelivr)</li>
-  <li>raw.githubusercontent.com (GitHub)</li>
 </ul>
-<p>Each request contains the translation, book, chapter and verse numbers needed to get the text. It does not include your name, an account, saved verses or any other personal information from the app. Like any internet request, it reveals standard technical information to the service that receives it, such as your IP address and basic device and software details. These services are run by other parties and have their own privacy practices. The developer does not operate them and does not receive this information.</p>
+<p>Each request contains the translation, book, chapter and verse numbers needed to get the text. It does not include your name, an account, saved verses, your country or any other personal information from the app. Like any internet request, it reveals standard technical information to the service that receives it, such as your IP address and basic device and software details. These services are run by other parties and have their own privacy practices. The developer does not operate them and does not receive this information.</p>
 
 <h2>Permissions</h2>
 <ul>
   <li><strong>Internet</strong> – to download Bible verse text, as described above.</li>
   <li><strong>Foreground service</strong> – to show a brief notification while the app refreshes the verse on the widget, so Android lets the refresh finish.</li>
 </ul>
-<p>The app does not ask for access to your contacts, location, camera, microphone, photos or files.</p>
+<p>The app does not ask for access to your contacts, location, camera, microphone, photos or files. (The country check described above uses the country codes Android reports for your SIM card, mobile network and language setting, which need no permission.)</p>
 
 <h2>What the app does not do</h2>
 <ul>
